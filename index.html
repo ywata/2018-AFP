@@ -1,0 +1,18 @@
+---
+title: Advanced functional programming
+layout: default
+---
+
+
+<h2>Latest news</h2>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <em> {{ post.date | date_to_string }} </em> <br>
+      {{ post.content }}
+    </li>
+  {% endfor %}
+</ul>
+
+
