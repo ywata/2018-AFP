@@ -9,6 +9,12 @@ To be entered.
 
 ### Assignments
 
+Please submit all your solutions to
+[Submit](http://www.cs.uu.nl/docs/submit) before the specified
+deadline.
+
+#### [Assignment 1 -- Smooth Permutations](assignment1.html)
+
 We have a
 [collection of small programming assignments](doc/assignments.pdf)
 that will form the basis of the lab exercises during the course.
