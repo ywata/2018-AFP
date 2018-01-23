@@ -29,17 +29,17 @@ smoothPerms n xs = filter (smooth n) (perms xs)
 
 ### Exercise 1 -- Packaging and documentation (10%)
 
-1. Create a library `smoothies` which exports `perms` and `smoothPerms` (feel free to choose the name of the module). You should be able to install the package by just running `cabal install` in it.
+1. Create a library `smoothies` which exports `perms` and `smoothPerms` from a module `SmoothPermsSlow`. You should be able to install the package by just running `cabal install` in it.
 2. Document the exported functions using [Haddock](http://haskell-haddock.readthedocs.io/en/latest/index.html).
 
 ### Exercise 2 -- Testsuite (10%)
 
-1. Write a comprehensive set of properties to check that `smoothPerms` works correctly.
+1. Write a `SmothPermsTest` module with a comprehensive set of properties to check that `smoothPerms` works correctly.
 2. Integrate your testsuite with Cabal using `tasty` ([here is how you do so](https://github.com/feuerbach/tasty#project-organization-and-integration-with-cabal)).
 
 ### Exercise 3 -- Implementation with trees (30%)
 
-The initial implementation of `smoothPerms` is very expensive. A better approach is to build a tree, for which it holds that each path from the root to a leaf corresponds to one of the possible permutations, next prune this tree such that only smooth paths are represented, and finally use this tree to generate all the smooth permutations from.
+The initial implementation of `smoothPerms` is very expensive. A better approach is to build a tree, for which it holds that each path from the root to a leaf corresponds to one of the possible permutations, next prune this tree such that only smooth paths are represented, and finally use this tree to generate all the smooth permutations from. Expose this new implementation in a new `SmoothPermsTree` module.
 
 1. Define a data type `PermTree` to represented a permutation tree.
 2. Define a function `listToPermTree` which maps a list onto this tree.
@@ -50,7 +50,7 @@ The initial implementation of `smoothPerms` is very expensive. A better approach
 4. Define a function `pruneSmooth`, which leaves only smooth permutations in the tree.
 5. Redefine the function `smoothPerms`.
 
-This new implementation should be available in a new module of your package, and pass all the tests you developed in exercise 2.
+Integrate this module in the testsuite you developed in the previous exercise.
 
 ### Exercise 4 -- Unfolds (30%)
 
@@ -75,20 +75,35 @@ unfoldTree next x = case next x of
                       Right (l, r) -> Node (unfoldTree next l) (unfoldTree next r)
 ```
 
-Define the following functions in a new module which should be exposed as part of your library. Define the functions using `unfoldr` or `unfoldTree`, as required.
+Define the following functions in a new module `UnfoldUtils`, which should *not* be exposed by your package. Define the functions using `unfoldr` or `unfoldTree`, as required.
 
 1. `iterate :: (a -> a) -> a -> [a]`. The call `iterate f x` generates the infinite list `[x, f x, f (f x), ...]`.
 2. `map :: (a -> b) -> [a] -> [b]`.
 3. `balanced :: Int -> Tree ()`, which generates a balanced binary tree of the given height.
 4. `sized :: Int -> Tree Int`, which generates any tree with the given number of nodes. Each leaf in the returned tree should have a unique label.
 
-Define an `unfoldPermTree` function which generates a `PermTree` as defined in the previous exercise. Use that `unfoldPermTree` to implement a new version of `listToPermTree`.
+Define a new module `SmoothPermsUnfold` with an `unfoldPermTree` function which generates a `PermTree` as defined in the previous exercise. Then use that `unfoldPermTree` to implement a new version of `listToPermTree` and `smoothPerms`.
+
+### Recap of modules
+
+By the end of exercise 4, you should have a package with the following modules:
+
+* `SmoothPermsSlow`, exposed, with the initial slow implementation.
+* `SmoothPermsTest`, which contains the QuickCheck tests.
+* `SmoothPermsTree`, exposed, with the `PermsTree`-based implementation.
+* `UnfoldUtils`, hidden.
+* `SmoothPermsUnfold`, exposed, with the `unfold`-based implementation.
 
 ### Exercise 5 -- Proofs (20%)
 
-1. Prove using induction and equational reasoning that `length (split xs) = length xs` and that `length (snd (split xs)) = length xs - 1`.
-2. Prove that if `p` is a smooth permutation with maximum distance `d` and head element `h`, then `sum p <= (length p) * (h + d)`.
-3. (Extra) Prove that `length (perms xs) = factorial (length xs)`. Use the following identity as a lemma.
+Write the following proofs as comments in the `UnfoldUtils` module.
 
-$$\mathsf{length} \, [t \, | \, x \leftarrow g, y \leftarrow h \, x]
-= \sum_{x \, \in \, g} \mathsf{length} \, (h \, x)$$
+1. Prove using induction and equational reasoning that the version of `map` you defined using `unfoldr` coincides with the definition of `map` by recursion.
+2. We define the `size` of a binary tree as the number of internal nodes.
+
+    ```haskell
+    size (Leaf _)   = 0
+    size (Node l r) = 1 + size l + size r
+    ```
+
+    What is the `size` of a balanced tree as generated by `balanced`? Prove your result using induction and equational reasoning.
