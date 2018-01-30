@@ -1,9 +1,9 @@
 ---
-title: Assignment 1 -- Smooth Permutations
+title: Assignment 1 -- Smooth permutations
 layout: default
 ---
 
-# Assignment 1 -- Smooth Permutations
+# Assignment 1 -- Smooth permutations
 
 In this assignment we want to build a library to generate smooth permutations. Given a list of integers `xs` and an integer `d`, a _smooth permutation of `xs` with maximum distance `d`_ is a permutation in which the difference of any two consecutive elements is at most `d`.
 

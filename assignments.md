@@ -13,7 +13,17 @@ Please submit all your solutions to
 [Submit](http://www.cs.uu.nl/docs/submit) before the specified
 deadline.
 
-#### [Assignment 1 -- Smooth Permutations](assignment1.html)
+#### [Assignment 1 -- Smooth permutations](assignment1.html)
+
+#### [Assignment 2 -- Monads](assignment2.html)
+
+#### [Assignment 3 -- Term and type-level recursion](assignment3.html)
+
+#### [Assignment 4 -- Transformers and generics?](assignment4.html)
+
+#### [Assignment 5 -- Agda](doc/Exercise.agda)
+
+### Additional exercises
 
 We have a
 [collection of small programming assignments](doc/assignments.pdf)
