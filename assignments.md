@@ -3,15 +3,13 @@ title: Assigments
 layout: default
 ---
 
-### Main project
-
-To be entered.
+### [Main project](project.html)
 
 ### Assignments
 
-Please submit all your solutions to
+<!-- Please submit all your solutions to
 [Submit](http://www.cs.uu.nl/docs/submit) before the specified
-deadline.
+deadline. -->
 
 #### [Assignment 1 -- Smooth permutations](assignment1.html)
 
