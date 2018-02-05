@@ -15,11 +15,11 @@ deadline.
 
 #### [Assignment 1 -- Smooth permutations](assignment1.html)
 
-#### [Assignment 2 -- Monads](assignment2.html)
+#### [Assignment 2 -- Monads and other structures](assignment2.html)
 
 #### [Assignment 3 -- Term and type-level recursion](assignment3.html)
 
-#### [Assignment 4 -- Transformers and generics?](assignment4.html)
+#### [Assignment 4 -- Transformers and generics](assignment4.html)
 
 #### [Assignment 5 -- Agda](doc/Exercise.agda)
 
