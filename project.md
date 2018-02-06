@@ -7,13 +7,17 @@ layout: default
 
 ### Description and requirements
 
-The goal of the main project is to develop an application or library using the concepts and techniques introduced in the lectures. More concretely, the project should:
+The goal of the main project is to develop an application or library
+using the concepts and techniques introduced in the lectures. More
+concretely, the project should:
 
-* Be large-ish, on the lines of several thousands lines of code;
+* Be substantial: it should encompasse several thousands lines of code;
 * Tackle a real-world scenario, that is, it should have a useful application;
 * Illustrate that you know how to apply concepts and techniques for the lectures;
-* In particular, use **strong types** to develop a *domain specific language*;
-* Be developed using a realistic process, that is, include testing, profiling, and project management.
+* In particular, use **strong types** to develop a *domain specific
+  language* to solve a particular problem;
+* Showcase the best development practices that you have learned,
+  include testing, profiling, and project management.
 
 ### Deliverables
 
@@ -39,18 +43,32 @@ At the middle of the period you have to hand in a report (1 to 2 pages) describi
 
 #### Presentation and final submission -- due 5/4
 
-Your final submission should contain the code and a small report (around 5 pages) outlining:
+Your final submission should contain the code and a small report
+(around 5 pages) outlining:
 
 1. A description of your domain and problem and how they translate to code.
 2. The most important concept and techniques used throughout the code.
-3. The results you have achieved, including examples of use of your library or application.
-4. Reflection about what went well or better than expected, and what problems you encountered.
+3. The results you have achieved, including examples of use of your
+   library or application.
+4. Reflection about what went well or better than expected, and what
+   problems you encountered.
 
-On 5/4 each team should prepare a small presentation (20 minutes, including questions) to describe the highlights of the project -- both in terms of functionality and techniques -- to the rest of the class.
+On 5/4 each team should prepare a small presentation (20 minutes,
+including questions) to describe the highlights of the project -- both
+in terms of functionality and techniques -- to the rest of the class.
 
 ### Suggested topics
 
-* A task-oriented programming framework in the lines of [iTasks](https://clean.cs.ru.nl/ITasks).
+A few ideas for possible topics are included below -- but this list is
+by no means exhaustive:
+
+* A task-oriented programming framework in the lines of
+  [iTasks](https://clean.cs.ru.nl/ITasks).
 * A library for describing spreadsheet calculations, and compute them.
-* A Submit-like system with a webserver (maybe using [Servant](http://hackage.haskell.org/package/servant)) and a front-end (maybe using [GHCJS](https://github.com/ghcjs/ghcjs)).
-* A library for chemistry in the lines of [chemlab](http://chemlab.github.io/chemlab/), but strongly-typed.
+* A Submit-like system with a webserver (maybe using
+  [Servant](http://hackage.haskell.org/package/servant)) and a
+  front-end (maybe using [GHCJS](https://github.com/ghcjs/ghcjs)).
+* A library for chemistry in the lines of
+  [chemlab](http://chemlab.github.io/chemlab/), but strongly-typed.
+* A library for data visualization and exploration;
+* ...
