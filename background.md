@@ -8,7 +8,7 @@ layout: default
 I'll try to collect several links with background reading. 
 
 
-### Quickcheck
+### QuickCheck
 
 * [Chapter 11 of Real World Haskell](http://book.realworldhaskell.org/read/testing-and-quality-assurance.html)
   shows a great example of using QuickCheck in tandem with HPC.
