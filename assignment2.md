@@ -1,7 +1,13 @@
 ---
-title: Assignment 2 -- Functors, applicatives, and monads
+title: Assignment 2 -- Monads and other structures
 layout: default
 ---
+
+# Assignment 2
+
+The GitHub Classrooms link for this assignment is [here](https://classroom.github.com/a/4FyhBxrY).
+
+## Functors, applicative and monad
 
 Given the standard type classes for functors, applicative functors and
 monads:
@@ -18,8 +24,6 @@ class Applicative f => Monad f where
   return :: a -> f a
   (>>=) :: f a -> (a -> f b) -> f b
 ```
-
-## Functors, applicative and monad
 
 Give instances for all three classes for the following data types:
 

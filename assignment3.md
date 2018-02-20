@@ -5,6 +5,8 @@ layout: default
 
 # Assignment 3 -- Term and type-level recursion
 
+The GitHub Classrooms link for this assignment is [here](https://classroom.github.com/a/X1joedKn).
+
 ### Exercise 1 -- Term-level fixpoints (20%)
 
 1. Given the function
