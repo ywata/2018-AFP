@@ -21,6 +21,8 @@ deadline. -->
 
 #### [Assignment 5 -- Agda](doc/Exercise.agda)
 
+### [Procedure for peer review](review.html)
+
 ### Additional exercises
 
 We have a
@@ -90,5 +92,3 @@ that will form the basis of the lab exercises during the course.
 <!-- complete. -->
 
 <!-- Please submit this last set of exercises no later than **Friday, March 31**. -->
-
-

@@ -5,6 +5,12 @@ layout: default
 
 # Assignment 1 -- Smooth permutations
 
+### Before you begin
+
+We are using GitHub Classrooms for this assignment. Before you begin with the assignment, please link your GitHub account to the AFP classroom and create a repo for this assignment. You can do so by following [this link](https://classroom.github.com/a/scD7K47R).
+
+### Introduction
+
 In this assignment we want to build a library to generate smooth permutations. Given a list of integers `xs` and an integer `d`, a _smooth permutation of `xs` with maximum distance `d`_ is a permutation in which the difference of any two consecutive elements is at most `d`.
 
 A naïve implementation just generates all the permutations of a list,
