@@ -7,6 +7,12 @@ layout: default
 
 The GitHub Classrooms link for this assignment is [here](https://classroom.github.com/a/4FyhBxrY).
 
+#### Grading
+
+* Each requested instance is worth half a point. Since there are 5 classes times 3 types = 15 instances, the first two sections are 7,5 points in total.
+* The exercise with `lookup` is worth 1,5 points.
+* The exercise with `foldMap` is worth 1 point.
+
 ## Functors, applicative and monad
 
 Given the standard type classes for functors, applicative functors and
@@ -28,20 +34,18 @@ class Applicative f => Monad f where
 Give instances for all three classes for the following data types:
 
 ```haskell
-
 data Tree a = Leaf a | Node (Tree a) (Tree a)
 
 data RoseTree a = RoseNode a [RoseTree a] | RoseLeaf
 
-data Teletype a = 
-  Get (Char -> Teletype a)
-  | Put Char (Teletype a)
-  | Return a
+data Teletype a = Get (Char -> Teletype a)
+                | Put Char (Teletype a)
+                | Return a
 ```
 
 ## Foldable & traversable
 
-Also give instances for the `Foldable` and `Traversible` classes:
+Also give instances for the `Foldable` and `Traversable` classes:
 
 ```haskell
 class Foldable t where
@@ -53,7 +57,7 @@ class Traversable t where
 
 ## Maps and keys
 
-Using methods from the above type classes exclusively, show how to
+Using only methods from the above type classes and `lookup`, show how to
 define the following function:
 
 ```haskell
