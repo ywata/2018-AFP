@@ -23,7 +23,7 @@ either an error message or a result of type `a` and the remaining
 
 ### Exercise 1 -- Functor, monad and applicative (10%)
 
-Write the `Functor`, `Applicative`, `Monad`, and `MonadPlus` instances
+Write the `Functor`, `Applicative`, `Monad`, and `Alternative` instances
 for the parser type above.
 
 ### Exercise 2 -- Monad transformers (10%)
@@ -38,7 +38,12 @@ parse user-defined data structures.
 Use GHC Generics and the `Parser` type defined in Exercise 2, together
 with any auxiliary combinators that you need, to define a *generic*
 `Parse` class. You may want to have a look at `Generic.Deriving.Show`
-to see how a generic `Show` instance can be derived. Writing a generic
-read for all possible constructs is not feasible, but try to cover as
-much of the language as you can. What cases cannot be handled without
-backtracking?
+to see how a generic `Show` instance can be derived. You may want to
+have a look at the `uuparsinglib`, `attoparsec` or `parsec` libraries
+for some inspiration on useful auxiliary functions that you may want
+to define.
+
+
+Writing a generic read for all possible constructs is not feasible,
+but try to cover as much of the language as you can. What cases cannot
+be handled without backtracking?
