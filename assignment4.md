@@ -13,7 +13,7 @@ Instead of the *backtracking* parsers covered in the lectures and
 ```
 newtype ErrorMsg = ErrorMsg String
 
-newtype Parser a = Parser (String -> Either ErrorMsg (a,String)
+newtype Parser a = Parser (String -> Either ErrorMsg (a,String))
 ```
 
 A parser consists of a function that reads from a `String` to produce
