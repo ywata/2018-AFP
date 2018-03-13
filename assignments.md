@@ -19,7 +19,7 @@ deadline. -->
 
 #### [Assignment 4 -- Transformers and generics](assignment4.html)
 
-#### [Assignment 5 -- Agda](doc/Exercise.agda)
+#### [Assignment 5 -- Agda](https://classroom.github.com/a/PQfyoR9w)
 
 ### [Procedure for peer review](review.html)
 
