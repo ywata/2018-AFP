@@ -5,6 +5,8 @@ layout: default
 
 # Assignment 4 -- Transformers and generics
 
+[The GitHub Classrooms link for this assignment is here](https://classroom.github.com/a/XAaH3jMH).
+
 ## Parsing with error messages
 
 Instead of the *backtracking* parsers covered in the lectures and
