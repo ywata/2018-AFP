@@ -49,3 +49,31 @@ to define.
 Writing a generic read for all possible constructs is not feasible,
 but try to cover as much of the language as you can. What cases cannot
 be handled without backtracking?
+
+#### Grading
+
+Out of the 8 points assigned to this exercise:
+
+* An implementation which holds "basic" ADTs should get a 6.
+    To make it more precise, this means that it works for:
+
+    ```haskell
+    data Bool    = True | False
+    data IntTree = Leaf Int | Node IntTree IntTree
+    ```
+
+* If fixity of operators is taken into account, add 1 extra point.
+    To make it more precise, that means that the parser can handle
+    `Leaf 1 :|: (Leaf 2 :|: Leaf 3)` when `IntTree` is declared as:
+
+    ```haskell
+    data IntTree = Leaf Int | IntTree :|: IntTree
+    ```
+
+* If record labels are taken into account, add 1 extra point.
+    To make it more precise, that means that the parser can handle
+    `Number { n = 1 }`  for a data type declared as:
+
+    ```haskell
+    data Number = Number { n :: Int }
+    ```
